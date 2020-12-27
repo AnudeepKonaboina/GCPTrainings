@@ -1,0 +1,23 @@
+service: kafka-service
+runtime: custom
+env: flex
+
+env_variables:
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+  cpu_utilization:
+    target_utilization: 0.8
+network:
+  name: default-vpc
+  subnetwork_name: default-vpc
+readiness_check:
+  check_interval_sec: 30
+  timeout_sec: 4
+  failure_threshold: 5
+  success_threshold: 2
+  app_start_timeout_sec: 600
+resources:
+  cpu: 2
+  memory_gb: 8
+  disk_size_gb: 25

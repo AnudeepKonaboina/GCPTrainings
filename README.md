@@ -7,6 +7,13 @@
 ``
 
 Example:
+```
+single service:
+===============
+sh deploy_gae_service.sh -s "kafkaservice" -p "/project/code"
 
-``sh deploy_gae_service.sh -s "kafkaservice" -p "/project/code"
-``
+List of services:
+================
+sh deploy_gae_service.sh -s "service1 service2" -p "/project/code"
+
+```

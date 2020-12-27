@@ -13,10 +13,9 @@ RUN wget "https://www-us.apache.org/dist/kafka/2.1.0/kafka_2.11-2.1.0.tgz" -O ~/
 	
 RUN mkdir -p ~/kafka && cd ~/kafka
 
-
 RUN  tar -xvzf ~/Downloads/kafka.tgz -C ~/kafka
 
-ADD startup.sh startup.sh
+ADD bin/startup.sh /bin/startup.sh
 RUN chmod 777 startup.sh
 
-CMD ["sh","startup.sh"]
+CMD ["sh","/bin/startup.sh"]

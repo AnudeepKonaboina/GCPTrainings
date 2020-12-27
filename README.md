@@ -1,6 +1,6 @@
-## GCPTrainings
+# GCPTrainings
 
-####Installing/Deploying a service or a list of services/apps on GAE:
+## Installing/Deploying a service or a list of services/apps on GAE:
 ================================================================
 Using the deploy servies script we can deploy ny number of services or applications on GAE using the following command:
 

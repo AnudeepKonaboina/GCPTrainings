@@ -1,3 +1,91 @@
 Google Cloud Platform:
 =======================
-GCP also
+Cloud computing is nothing but the delivery of on-demand resources over the internet on pay as you use pricing method.These on-demoand resources are provided by a cloud provider and one such cloud provider is GCP.
+
+Definition:
+===========
+GCP is a set of cloud computing services by Google which run on the same infra as that of other services like youtube,gmail etc.
+Domains: 
+--------
+1.Compute - App engine ,compute engine ,kubernetes engine ,cloud functions, cloud run 
+2.Storage -Cloud Storage,cloudSql,Bigtable,cloudDatastore 
+3.Networking -VPC,cloud DNS,cloud Armor,cloud CDN
+4.BigData -BigQuery,cloud Datproc,coloud data prep.cloud pub/dub etc.
+5.Developer tools-clod sdk,deployment manger,cloud source,cloud test labs
+6.Identity and security-IAM,security key,KMS etc.
+7.IOT -cloud IOT,edge TPU
+8.API platform-maps platform etc.
+
+Comparision:
+============
+
+|  Factors   |             AWS             |         AZURE          |             GCP             |
+|============|=============================|========================|=============================|
+| Entry      | Launched in 2006(oldest)    | Launched in 2010       | Launched in 2011            |
+| AZ's       | 55 AZ's                     | 44 Az's                | 18 AZ'S                     |
+| clients    | used by Netflix,bmw,samsung | HP,Jhonson             | HSBC,Paypal,dominos         |
+| offerings  | 200+ services               | 100+                   | 60+                         |
+| IAAS       | EC2(1 minute creation)      | VM (> 1minutes)        | Compute Engine(few seconds) |
+| PAAS       | Elastic Beanstalk           | AppService             | App Engine                  |
+| functions  | Lambda                      | Azure Functions        | GcloudFunctions             |
+| RDBMS      | RDS(relational)             | SQLDB sevices          | cloud SQL Database          |
+| containers | Amazon ECS                  | Azure Kubernetes (AKS) | GKE                         |
+| Storage    | S3(Storage)                 | Blob                   | cloud Strorage              |
+| NoSQl      | DynamoDB                    | Table Storage          | BigTable                    |
+| Monitoring | cloud trail(monitoring)     | Operational            | StackDriver                 |
+| downtime   | moderate downtime           | highest downtime       | very less downtime          |
+| Pricing    | 2vcpus+8gb ram(69$/month)   | same costs(70$/month)  | same costs(52$/month)       |
+|            |                             |                        |                             |
+
+
+
+Services:
+=========
+
+IAM :
+====
+1.create a service account with minimal permissons and add users into that account
+```
+master@w3:$ gcloud iam service-accounts keys create ~/key.json --iam-account cloudexpert@gcptutuorials.iam.gserviceaccount.com
+```
+The key file is the from:
+=========================
+The format of the key may differ depending on how it is generated. Keys created using the Cloud Console or the gcloud command-line tool look like this:
+{
+  "type": "service_account",
+  "project_id": "gcptutuorials",
+  "private_key_id": "key-id",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nprivate-key\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-account-email",
+  "client_id": "client-id",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account-email"
+}
+```
+master@w3:$ gcloud auth activate-service-account --key-file=gcp.json
+Activated service account credentials for: [cloudexpert@gcptutuorials.iam.gserviceaccount.com]
+```
+
+Compute Engines:
+
+ssh into a compute instance:
+============================	
+1st way : using a gcloud cli command
+
+```
+gcloud beta compute ssh --zone "asia-southeast1-b" "instance-1" --project "gcptutuorials"
+ak0107@w3:~/gcp_test$ gcloud beta compute ssh --zone "asia-southeast1-b" "instance-1" --project "gcptutuorials"
+Updating project ssh metadata...⠹Updated [https://www.googleapis.com/compute/beta/projects/gcptutuorials].
+Updating project ssh metadata...done.
+Waiting for SSH key to propagate.
+Warning: Permanently added 'compute.7976604803214466465' (ECDSA) to the list of known hosts.
+Welcome to Ubntu.
+```
+2nd way :using ssh browser from the UI 
+
+3rd way : using ssh keys
+
+https://cloud.google.com/sdk/docs/cheatsheet ===>refrences
+

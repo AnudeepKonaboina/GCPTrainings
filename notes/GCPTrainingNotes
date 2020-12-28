@@ -37,6 +37,12 @@ Comparision:
 | Pricing    | 2vcpus+8gb ram(69$/month)   | same costs(70$/month)  | same costs(52$/month)       |
 |            |                             |                        |                             |
 
+Project:
+========
+Any resource you create in GCP will be created inside a project .Any resource can only be cretaed whenever you are working under a specific project.
+
+
+
 
 
 Services:

@@ -1,6 +1,7 @@
 Introduction:
 =============
 Google App Engine is a Platform as a Service and cloud computing platform for developing and hosting web applications in Google-managed data centers. Applications are sandboxed and run across multiple servers.
+App Engine is configured using an app.yaml file, that contains CPU, memory, network and disk resources, scaling, and other general settings including environment variables.
  
 
 Deploy a service to GAE after creating a project:

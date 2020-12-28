@@ -3,8 +3,8 @@ runtime: custom
 env: flex
 
 network:
-  name: modak-nabu-spark-vpc
-  subnetwork_name: modak-nabu-spark-vpc
+  name: vpc
+  subnetwork_name: vpc
 readiness_check:
   check_interval_sec: 30
   timeout_sec: 4

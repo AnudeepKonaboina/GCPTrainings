@@ -13,9 +13,9 @@ resource "google_app_engine_flexible_app_version" "first_app" {
   runtime    = "custom"
 
   deployment {
-    zip {
-      source_url = "https://storage.googleapis.com/bucketterraform/kafka_service.zip"
-    }
+   container {
+     image = "asia.gcr.io/gcptutorials/kafka-image"
+   }
   }
 
   liveness_check {
@@ -32,7 +32,6 @@ resource "google_app_engine_flexible_app_version" "first_app" {
       target_utilization = 0.8
     }
   }
-
 }
 
 

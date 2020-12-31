@@ -4,11 +4,11 @@ usage() { echo "Usage: $0 args to be used are [-s <string>] [-p <string>] " 1>&2
 deploy(){
 for service in $services; do
 	echo "Dir $service"
-    #Go int0 service directory
-    cd $service;
-    #check wheteher insatnces exist or not
-    gcloud app instances list -s $service --filter="RUNNING"
 
+    #Go into service directory
+    cd $service;
+    #check wheteher instances exist or not
+    gcloud app instances list -s $service --filter="RUNNING"
     if [ $? -eq 0];then
     	echo "Deleting and deploying service $val";
     	gcloud app -q services delete $service && gcloud app --verbosity=debug -q deploy;

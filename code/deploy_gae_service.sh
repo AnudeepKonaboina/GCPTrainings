@@ -9,7 +9,7 @@ for service in $services; do
     cd $service;
     #check wheteher instances exist or not
     gcloud app instances list -s $service --filter="RUNNING"
-    if [ $? -eq 0];then
+    if [ $? -eq 0 ];then
     	echo "Deleting and deploying service $val";
     	gcloud app -q services delete $service && gcloud app --verbosity=debug -q deploy;
     else 
@@ -33,8 +33,6 @@ while getopts ":s:p:" opt; do
     esac
 done
 shift $((OPTIND-1))
-
-
 
 if [ -z "${services}" ] || [ -z "${path}" ]; then
     usage

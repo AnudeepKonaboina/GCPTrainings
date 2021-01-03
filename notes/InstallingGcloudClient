@@ -1,5 +1,22 @@
+Installing Gcloud command line interface:
+========================================== 
 
-[master@base]$ cd "${HOME}"
+Shell commands:
+---------------
+```sh 
+cd "${HOME}"
+
+wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix="${HOME}"
+
+tar xzf google-cloud-sdk.tar.gz
+
+./google-cloud-sdk/install.sh --usage-reporting false --path-update false --command-completion false
+```
+
+OUTPUT:
+-------
+```sh
+[master@v3 ~]$ cd "${HOME}"
 [master@w3 ~]$ wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix="${HOME}"
 --2020-11-20 16:49:52--  https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
 Resolving dl.google.com (dl.google.com)... 172.217.163.206, 2404:6800:4007:810::200e
@@ -25,3 +42,4 @@ Welcome to the Google Cloud SDK!
 This will install all the core command line tools necessary for working with
 the Google Cloud Platform.
 
+```

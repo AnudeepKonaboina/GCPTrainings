@@ -41,10 +41,6 @@ Project:
 ========
 Any resource you create in GCP will be created inside a project .Any resource can only be cretaed whenever you are working under a specific project.
 
-
-
-
-
 Services:
 =========
 

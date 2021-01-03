@@ -1,5 +1,6 @@
 # GoogleCloudPlatform
 
+## Table of Contents
 - [Contents](#Introduction)
   * [Notes](#Notes)
   * [Code](#Code)
@@ -12,7 +13,9 @@ This project has the learnings and notes about Google cloud Platform and its ser
 
 ## Notes
 1.GCPTrainingNotes - https://github.com/AnudeepKonaboina/GoogleCloudPlatform/blob/main/notes/GCPTrainingNotes
+
 2.GoogleAppEngine(Intro And Commands) - https://github.com/AnudeepKonaboina/GoogleCloudPlatform/blob/main/notes/GoogleAppEngine-IntroAndCommands
+
 3.Installation of Gcloud CLI - https://github.com/AnudeepKonaboina/GoogleCloudPlatform/blob/main/notes/InstallingGcloudClient
 
 ## Code

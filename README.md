@@ -43,7 +43,7 @@ gcloud app --verbosity=debug -q deploy
 
 Example:
 ```
-single service:
+Single service:
 ===============
 sh deploy_gae_service.sh -s "kafkaservice" -p "/project/code"
 
@@ -51,4 +51,34 @@ List of services:
 ================
 sh deploy_gae_service.sh -s "service1 service2" -p "/project/code"
 
+```
+
+
+#### Deploying a service or a list of services/apps on GAE using Terraform script:
+For deploying kafka on GAE using Terraform ,we need to have terraform installed
+Steps:
+1.Navigate to the service folder
+
+```
+cd <service folder>  Ex: cd kafkaservicedeployment/
+```
+
+2.Create an image out of the docker file and push it to the container registry
+
+```
+docker build -t <image_name>:<version> .  -- Ex: docker build -t kafka-image:v0.1
+
+docker tag kafka-image:v0.1 <registry_name>/<project_name>/kafka-image:v0.1 -- Ex:asia.gcr.io/gcptutorials/kafka-image:v0.1
+
+docker push asia.gcr.io/gcptutorials/kafka-image:v0.1
+```
+
+3.Run the below terrraform commands to deploy the service into GAE
+
+```
+terraform init 
+
+terraform plan -out plan.out
+
+terraform apply plan.out -auto-approve
 ```

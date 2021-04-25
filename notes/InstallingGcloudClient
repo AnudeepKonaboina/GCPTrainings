@@ -23,7 +23,7 @@ Resolving dl.google.com (dl.google.com)... 172.217.163.206, 2404:6800:4007:810::
 Connecting to dl.google.com (dl.google.com)|172.217.163.206|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 27528491 (26M) [application/octet-stream]
-Saving to: ‘/home/ak0107/google-cloud-sdk.tar.gz’
+Saving to: ‘/home/clouduser/google-cloud-sdk.tar.gz’
 
 100%[===========================================================================================================>] 2,75,28,491 13.7MB/s   in 1.9s
 
@@ -32,9 +32,9 @@ Saving to: ‘/home/ak0107/google-cloud-sdk.tar.gz’
 [master@w3 ~]$ tar xzf google-cloud-sdk.tar.gz
 [master@w3 ~]$ ll
 total 26884
-drwxrwxr-x  9 ak0107 ak0107      311 Nov 20 16:50 google-cloud-sdk
--rw-rw-r--  1 ak0107 ak0107 27528491 Nov 17 22:40 google-cloud-sdk.tar.gz
-drwxrwxr-x 14 ak0107 ak0107      261 Nov 20 16:33 workarea
+drwxrwxr-x  9 clouduser clouduser      311 Nov 20 16:50 google-cloud-sdk
+-rw-rw-r--  1 clouduser clouduser 27528491 Nov 17 22:40 google-cloud-sdk.tar.gz
+drwxrwxr-x 14 clouduser clouduser      261 Nov 20 16:33 workarea
 
 [master@w3 ~]$ ./google-cloud-sdk/install.sh --usage-reporting false --path-update false --command-completion false
 Welcome to the Google Cloud SDK!

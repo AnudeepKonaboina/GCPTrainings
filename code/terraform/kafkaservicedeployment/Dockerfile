@@ -21,4 +21,4 @@ WORKDIR /bin/
 
 RUN chmod 777 startup.sh
 
-CMD ["sh","/bin/startup.sh"]
+CMD ["sh","startup.sh"]

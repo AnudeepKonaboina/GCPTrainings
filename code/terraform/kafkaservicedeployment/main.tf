@@ -14,7 +14,7 @@ resource "google_app_engine_flexible_app_version" "first_app" {
 
   deployment {
    container {
-     image = "asia.gcr.io/gcptutorials/kafka-image"
+     image = "asia.gcr.io/gcptutorials/kafka-image:v0.1"
    }
   }
 
